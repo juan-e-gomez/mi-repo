@@ -18,6 +18,8 @@ li {
     cursor: pointer;
     text-align: center;
     line-height: 1em;
+    transition: font-weight 1s;
+    font-weight: 500;
 }
 
 h1, h2 {
@@ -26,7 +28,7 @@ h1, h2 {
 
 li:hover{
     background-color: rgb(0, 181, 15);
-    
+    font-weight: lighter;    
 }
 
 ul {
@@ -115,7 +117,8 @@ ul {
 
   .Footer { 
     padding: 0px 50px;
-    background-color: #00360e;
+    /*background-color: #00360e;*/
+    background-image: linear-gradient(to top, #00360e, #297d40);
     grid-area: Footer;
     display: flex;
     flex-direction: column;
@@ -320,7 +323,8 @@ input[type=submit]:hover {
   }
   .Footer { 
     padding: 0px 50px;
-    background-color: #00360e;
+    /*background-color: #00360e;*/
+    background-image: linear-gradient(to top, #00360e, #297d40);
     grid-area: Footer;
     display: flex;
     flex-direction: column;
@@ -385,4 +389,16 @@ input[type=submit]:hover {
     width: 100%;
     margin-top: 20px;
   }
+}
+
+
+@keyframes onOff {
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+.onOff{
+	animation-name: onOff;
+	animation-iteration-count: infinite;
+	animation-delay: 0s;
+	animation-duration: 4s;
 }
