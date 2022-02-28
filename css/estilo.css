@@ -1,14 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap');
 
-* {
+body {
     margin: 0;
     padding: 0;
     font-family: 'Rubik', sans-serif;
 }
 
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 a {
     text-decoration: none;
     color: white;
+}
+
+header {
+  background-color: #297d40
+}
+
+h1 {
+  color: white;
+  font-size: 3rem;
+  text-shadow: rgb(59, 59, 59) 0.1rem 0.1rem 0.2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  font-weight: normal;
 }
 
 li {
@@ -22,10 +40,6 @@ li {
     font-weight: 500;
 }
 
-h1, h2 {
-    font-size: 2rem;
-}
-
 li:hover{
     background-color: rgb(0, 181, 15);
     font-weight: lighter;    
@@ -35,370 +49,80 @@ ul {
     display: flex;
     padding-right: 2rem;
     padding-left: 2rem;
+    margin-bottom: 0;
 }
 
-#youtube {
-    margin-top: 1rem;
-}
-
-.map-responsive{
-  overflow:hidden;
-  padding-bottom:56.25%;
-  position:relative;
-  height:0;
-}
-
-.map-responsive iframe{
-  left:0;
-  top:0;
-  height:100%;
-  width:100%;
-  position:absolute;
-}
-
-.container {  
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 128px 700px 400px 400px 128px;
-    grid-auto-columns: 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "Header Header"
-      "Hero Hero"
-      "Section-A Section-B"
-      "Section-C Section-D"
-      "Footer Footer";
-    width: 100%;
-    height: 100%;
-  }
-
-  .Hero {
-    grid-area: Hero;
-    background-image: url(../assets/img/hero-banner.jpg);
-    background-size: cover;
-    background-position: center; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-repeat: no-repeat;
-  }
-
-  .Hero-Rates {
-    grid-area: Hero;
-    background-image: url(../assets/img/tiny-house.jpg);
-    background-size: cover;
-    background-position: center; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-repeat: no-repeat;
-  }
- 
-
-  h1 {
-      color: white;
-      font-size: 3rem;
-      text-shadow: rgb(59, 59, 59) 0.1rem 0.1rem 0.2rem;
-      padding-right: 2rem;
-      padding-left: 2rem;
-  }
-
-  button{
-      background-color: #297d40;
-      border: 0px;
-      padding: 1rem;
-    color: white;
-    border-radius: 0.2rem;
-    margin-top: 0.5rem;
-  }
-
-  .Footer { 
-    padding: 0px 50px;
-    /*background-color: #00360e;*/
-    background-image: linear-gradient(to top, #00360e, #297d40);
-    grid-area: Footer;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .Header { grid-area: Header;
-    padding: 0px 50px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 100%;
-    background-color: #00360e;
-  }
-  
-  .Section-A { grid-area: Section-A;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: end;
-    padding-right: 2rem;
-    padding-left: 2rem;
-    background-color: #297d40;
-     }
-  
-  .Section-B { grid-area: Section-B;
-    background-image: url("https://images.unsplash.com/photo-1604846252776-f2b3336da374?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    }    
-  
-  .Section-C { grid-area: Section-C;
-    background-image: url("https://images.unsplash.com/photo-1604846253303-b30fc835b7a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-     }
-  
-  .Section-D { grid-area: Section-D;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    padding-right: 2rem;
-    padding-left: 2rem;
-    background-color: #297d40;
-    }
-
-#no-sections {  
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 128px 700px 128px;
-  grid-auto-columns: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "Header Header"
-    "Hero Hero"
-    "Footer Footer";
-  width: 100%;
-  height: 100%;
-}
-
-#no-hero {  
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 128px 256px 400px 128px;
-  grid-auto-columns: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "Header Header"
-    "Section-A Section-A"
-    "Section-D Section-D"
-    "Footer Footer";
-  width: 100%;
-  height: 100%;
-}
-
-#location-sec-A { 
-  grid-area: Section-A;
+#hero {
+  background-image: url(../assets/img/hero-banner.jpg);
+  background-size: cover;
+  background-position: center; 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-right: 2rem;
-  padding-left: 2rem;
-  color:white;
-  background-color: #297d40;
-  vertical-align: middle;
-  }
-
-#location-sec-D { 
-  grid-area: Section-D;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-right: 2rem;
-  padding-left: 2rem;
-  background-color: #297d40;
+  background-repeat: no-repeat;
+  min-height: 700px;
 }
 
-#product-sec-D { 
-  grid-area: Section-D;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  padding-right: 2rem;
-  padding-left: 2rem;
+#boton{
   background-color: #297d40;
-  } 
+  border: 0px;
+  padding: 1rem;
+  color: white;
+  border-radius: 0.2rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
 
-.table-container {
+#sec-A{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: end;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
   background-color: #297d40;
 }
 
-table.tablePrice {
-  font-family: 'Rubik', sans-serif;
-  font-weight: lighter;
-  color: white;
-  border: solid;
-  table-layout: fixed;
-  border-color: #067e00;
-  border-width: 3px;
-  text-align: center;
-  width: 100%;
-  height: auto;
-  line-height: 1.5;
+#sec-B {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 0;
+  padding-right: 0;
 }
 
-/* Form de contacto */
-/* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
-  font-family: 'Rubik', sans-serif;
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */ 
-  border: 1px solid #003302; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+#sec-C{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 0;
+  padding-right: 0;
 }
 
-/* Style the submit button with a specific background color etc */
-input[type=submit] {
-  font-family: 'Rubik', sans-serif;
-  background-color: rgb(13, 76, 0);
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+#sec-D {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  background-color: #297d40;
 }
 
-/* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
-  font-family: 'Rubik', sans-serif;
-  background-color: #b2ff8ba3;
-}
-
-/* Add a background color and some padding around the form */
-.container-form {
-  font-family: 'Rubik', sans-serif;
-  border-radius: 5px;
-  background-color: #b2ff8ba3;
-  padding: 20px;
-  width: 50vw;
-  color: #003302;
-}
-
-@media only screen and (max-width: 721px){
-  .container {  
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 120px 500px 300px 400px 300px 400px 120px;
-    grid-auto-columns: 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: column;
-    grid-template-areas:
-      "Header"
-      "Hero"
-      "Section-A"
-      "Section-B"
-      "Section-D"
-      "Section-C"
-      "Footer";
-    width: 100%;
-    height: 100%;
-  }
-  .Footer { 
-    padding: 0px 50px;
-    /*background-color: #00360e;*/
-    background-image: linear-gradient(to top, #00360e, #297d40);
-    grid-area: Footer;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .Header { grid-area: Header;
-    padding: 0px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /*height: 100%;*/
-    background-color: #00360e;
-  }
-  .Hero {
-    grid-area: Hero;
-    background-image: url(../assets/img/hero-banner.jpg);
-    background-size: cover;
-    background-position: center; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-repeat: no-repeat;
-  }
-
-  h1 {
-      color: white;
-      font-size: 2rem;
-      text-shadow: rgb(59, 59, 59) 0.1rem 0.1rem 0.2rem;
-      padding-right: 1.5rem;
-      padding-left: 1.5rem;
-  }
-  li {
-    list-style: none;
-    margin: 0.5rem;
-    padding: 0.5rem;
-    cursor: pointer;
-    font-size: 90%;
-    text-align: center;
-  }
-
-  h2 {
-      font-size: 1.5rem;
-  }
-
-  li:hover{
-      background-color: rgb(0, 181, 15);
-      
-  }
-
-  ul {
-      display: flex;
-      padding-right: 0.5rem;
-      padding-left: 0.5rem;
-  }
-}
-
-@media only screen and (max-width: 767px){
-  .youtube {
-    width: 100%;
-    margin-top: 20px;
-  }
-}
-
-
-@keyframes onOff {
-	0%{opacity: 0;}
-	100%{opacity: 1;}
-}
-.onOff{
-	animation-name: onOff;
-	animation-iteration-count: infinite;
-	animation-delay: 0s;
-	animation-duration: 4s;
+footer { 
+  padding: 0px 50px;
+  background-color: #00360e;
+  background-image: linear-gradient(to top, #00360e, #297d40);
+  grid-area: Footer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
