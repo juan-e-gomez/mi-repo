@@ -2,11 +2,11 @@
 
 body,
 html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    padding-left: 0;
-    font-family: 'Rubik', sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  padding-left: 0;
+  font-family: 'Rubik', sans-serif;
 }
 
 .container-fluid {
@@ -118,6 +118,18 @@ ul {
   min-height: 100vh;
 }
 
+#hero-prod {
+  background-image: url(https://images.unsplash.com/photo-1601312044126-06d550c15beb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
+  background-size: cover;
+  background-position: center; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  min-height: 60vh;
+}
+
 #boton{
   background-color: #297d40;
   border: 0px;
@@ -138,6 +150,7 @@ ul {
   padding-left: 2rem;
   background-color: #297d40;
   min-height: 40vh;
+  text-align: end;
 }
 
 #sec-B {
@@ -171,6 +184,7 @@ ul {
   padding-left: 2rem;
   background-color: #297d40;
   min-height: 40vh;
+  text-align: start;
 }
 
 #sec-E {
@@ -194,6 +208,8 @@ ul {
   align-items: center;
   padding-right: 2rem;
   padding-left: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   background-color: #297d40;
   min-height: 40vh;
   background-size: cover;
@@ -205,6 +221,42 @@ ul {
   min-width: 70%;
   max-height: 80vh;
   min-height: 60vh;
+}
+
+#product-sec-D { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  background-color: #297d40;
+  } 
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #297d40;
+}
+
+table.tablePrice {
+  font-family: 'Rubik', sans-serif;
+  font-weight: lighter;
+  color: white;
+  border: solid;
+  table-layout: fixed;
+  border-color: white;
+  border-width: 3px;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  line-height: 1.7;
 }
 
 /*
@@ -278,3 +330,14 @@ input[type=submit]:hover {
 }
 
 /* Fin form de contacto */
+
+@keyframes onOff {
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+.onOff{
+	animation-name: onOff;
+	animation-iteration-count: infinite;
+	animation-delay: 0s;
+	animation-duration: 4s;
+}
