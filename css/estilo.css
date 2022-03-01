@@ -94,6 +94,30 @@ ul {
   min-height: 100vh;
 }
 
+#hero-2 {
+  background-image: url(https://images.unsplash.com/photo-1633609981351-67743b44e7ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80);
+  background-size: cover;
+  background-position: center; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+#hero-ctc {
+  background-image: url(../assets/img/contact-us.jpg);
+  background-size: cover;
+  background-position: center; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
 #boton{
   background-color: #297d40;
   border: 0px;
@@ -113,7 +137,7 @@ ul {
   padding-right: 2rem;
   padding-left: 2rem;
   background-color: #297d40;
-  min-height: 50vh;
+  min-height: 40vh;
 }
 
 #sec-B {
@@ -146,16 +170,67 @@ ul {
   padding-right: 2rem;
   padding-left: 2rem;
   background-color: #297d40;
-  min-height: 50vh;
+  min-height: 40vh;
+}
+
+#yt-video {
+  margin-top: 1rem;
+  max-width: 95%;
+  min-width: 70%;
+  max-height: 80vh;
+  min-height: 60vh;
 }
 
 footer { 
   padding: 0px 50px;
   background-color: #00360e;
   background-image: linear-gradient(to top, #00360e, #297d40);
-  grid-area: Footer;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
+/* Form de contacto */
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  font-family: 'Rubik', sans-serif;
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #003302; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  font-family: 'Rubik', sans-serif;
+  background-color: rgb(13, 76, 0);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  font-family: 'Rubik', sans-serif;
+  background-color: #b2ff8ba3;
+}
+
+/* Add a background color and some padding around the form */
+.container-form {
+  font-family: 'Rubik', sans-serif;
+  border-radius: 5px;
+  background-color: #b2ff8ba3;
+  padding: 20px;
+  width: 50vw;
+  color: #003302;
+}
+
+/* Fin form de contacto */
