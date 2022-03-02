@@ -227,9 +227,11 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   padding-right: 2rem;
   padding-left: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   background-color: #297d40;
   } 
 
