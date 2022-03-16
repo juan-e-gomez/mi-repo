@@ -10,13 +10,22 @@ html {
   font-family: 'Rubik', sans-serif;
 }
 
+$estilo-container:(
+  ancho: 100%,
+  mg-izq: 0,
+  mg-der: 0,
+  pd-izq: 0,
+  pd-der: 0
+);
+
 .container-fluid {
-  padding-left: 0;
-  padding-right: 0;
-  width: 100%;
-  margin-right: 0;
-  margin-left: 0;
+  padding-left: map-get($estilo-container, pd-izq);
+  padding-right: map-get($estilo-container, pd-der);
+  width: map-get($estilo-container, ancho);
+  margin-right: map-get($estilo-container, mg-izq);
+  margin-left: map-get($estilo-container, mg-izq);
 }
+
 
 .row {
   margin-right: 0;
@@ -40,7 +49,7 @@ header {
   font-size: 1rem;
 }
 
-h1 {
+@mixin h1-hero{
   color: white;
   font-size: 3rem;
   text-shadow: rgb(59, 59, 59) 0.1rem 0.1rem 0.2rem;
@@ -48,6 +57,10 @@ h1 {
   padding-left: 2rem;
   font-weight: 700;
 }
+
+h1 {
+    @include h1-hero;
+ }
 
 h2 {
   color: white;
@@ -203,15 +216,7 @@ ul {
 }
 
 #sec-F {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-right: 2rem;
-  padding-left: 2rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  background-color: $colorSecundario;
+  @extend #product-sec-D;
   min-height: 40vh;
   background-size: cover;
 }
