@@ -1,0 +1,5 @@
+Sumé etiquetas meta a las 5 páginas.
+Las keywords y la descripción son para todas las mismas, pero difieren en cuanto a title y url.
+Además se agregó logo y texto más corto para las etiquetas de Meta y Twitter para adaptarlo a cuando se comparte el sitio por WhatsApp, Facebook, Instagram y Twitter.
+
+Las palabras clave en inglés y español.
