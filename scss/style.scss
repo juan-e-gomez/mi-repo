@@ -42,6 +42,28 @@ header {
   display: flex;
   justify-content: space-around;
   background-color: $colorPrimario;
+
+  li {
+    list-style: none;
+    margin: 1rem;
+    padding: 0.5rem;
+    text-align: center;
+    line-height: 1em;
+    transition: font-weight 1s;
+    font-weight: 500;
+  }
+
+  li:hover{
+    background-color: rgb(0, 181, 15);
+    font-weight: lighter;    
+  }
+
+  ul {
+    display: flex;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    margin-bottom: 0;
+  }
 }
 
 .navbar-brand {
@@ -70,29 +92,6 @@ h2 {
 p {
   text-decoration: none;
   color: white;
-}
-
-li {
-    list-style: none;
-    margin: 1rem;
-    padding: 0.5rem;
-    cursor: pointer;
-    text-align: center;
-    line-height: 1em;
-    transition: font-weight 1s;
-    font-weight: 500;
-}
-
-li:hover{
-    background-color: rgb(0, 181, 15);
-    font-weight: lighter;    
-}
-
-ul {
-    display: flex;
-    padding-right: 2rem;
-    padding-left: 2rem;
-    margin-bottom: 0;
 }
 
 #hero {
@@ -232,7 +231,8 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
+  text-align: center;
   padding-right: 2rem;
   padding-left: 2rem;
   padding-top: 2rem;
@@ -269,22 +269,22 @@ table.tablePrice {
 #carousel-pina {
   padding-right: 0px;
   padding-left: 0px;
-  max-height: 75vh;
+  max-height: 70vh;
   overflow: hidden;
 }
 
 #carouselExampleControls {
-  max-height: 75vh;
+  max-height: 70vh;
   overflow: hidden;
 }
 .carousel-inner {
-  max-height: 75vh;
+  max-height: 70vh;
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: center;
   overflow: hidden;
 }
 
@@ -296,6 +296,27 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  li {
+    list-style: none;
+    margin: 1rem;
+    padding: 0.5rem;
+    text-align: center;
+    line-height: 1em;
+    transition: font-weight 1s;
+    font-weight: 500;
+  }
+
+  li:hover{
+    background-color: rgb(0, 181, 15);
+    font-weight: lighter;    
+  }
+
+  ul {
+    display: flex;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    margin-bottom: 0;
+  }
 }
 
 /* Form de contacto */
