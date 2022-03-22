@@ -25,8 +25,7 @@ a {
 header {
   padding: 0px 50px;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: space-around;
   background-color: #00360e; }
 
 .navbar-brand {
@@ -81,7 +80,7 @@ ul {
   min-height: 100vh; }
 
 #hero-2 {
-  background-image: url(https://images.unsplash.com/photo-1633609981351-67743b44e7ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80);
+  background-image: url(https://images.unsplash.com/photo-1627386172141-c6fec8bf5aa3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -227,19 +226,22 @@ table.tablePrice {
 #carousel-pina {
   padding-right: 0px;
   padding-left: 0px;
-  max-height: 80vh; }
+  max-height: 75vh;
+  overflow: hidden; }
 
 #carouselExampleControls {
-  max-height: 80vh; }
+  max-height: 75vh;
+  overflow: hidden; }
 
 .carousel-inner {
-  max-height: 80vh;
+  max-height: 75vh;
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  justify-content: end; }
+  justify-content: end;
+  overflow: hidden; }
 
 footer {
   padding: 0px 50px;
