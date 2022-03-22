@@ -110,13 +110,17 @@ p {
 
 #boton {
   background-color: #297d40;
-  border: 0px;
-  padding: 1rem;
   color: white;
-  border-radius: 0.2rem;
   margin-top: 0.5rem;
   text-align: center;
-  font-size: 1rem; }
+  font-size: 1rem;
+  font-family: 'Rubik', sans-serif;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer; }
+  #boton boton:hover {
+    background-color: #b2ff8ba3; }
 
 #sec-A {
   display: flex;
@@ -175,7 +179,8 @@ p {
 
 #sec-F {
   min-height: 40vh;
-  background-size: cover; }
+  background-size: cover;
+  align-items: center; }
 
 #yt-video {
   margin-top: 1rem;
@@ -307,14 +312,17 @@ input[type=submit]:hover {
   border-radius: 5px;
   background-color: #b2ff8ba3;
   padding: 20px;
-  width: 50vw;
-  color: #003302; }
+  width: 80vw;
+  color: #003302;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px; }
 
 /* Fin form de contacto */
 @keyframes onOff {
-  0% {
+  20% {
     opacity: 0; }
-  100% {
+  80% {
     opacity: 1; } }
 
 .onOff {
