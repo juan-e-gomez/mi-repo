@@ -97,7 +97,7 @@ ul {
 }
 
 #hero {
-  background-image: url(../assets/img/hero-banner.jpg);
+  background-image: url(https://images.unsplash.com/photo-1599813674302-e3b2bc05695f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80);
   background-size: cover;
   background-position: center; 
   display: flex;
@@ -133,7 +133,7 @@ ul {
 }
 
 #hero-prod {
-  background-image: url(https://images.unsplash.com/photo-1601312044126-06d550c15beb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
+  background-image: url(https://images.unsplash.com/photo-1587197446568-23587beb4fa7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80);
   background-size: cover;
   background-position: center; 
   display: flex;
@@ -267,28 +267,23 @@ table.tablePrice {
   line-height: 1.7;
 }
 
-/*
-Forces carousel image to be 100% width and not max width of 100%
-*/
-.carousel-item .img-fluid {
-  width:100%;
-  max-height:50vh;
-  min-height:20vh;
-  background-size: cover;
-  background-position: inherit;
-  background-repeat: repeat-x;
-}
-
-.carousel-inner {
-  /* make sure your .items will get correct height */
-  height: 100%;
-}
-
 #carousel-pina {
   padding-right: 0px;
   padding-left: 0px;
+  max-height: 80vh;
+}
+
+#carouselExampleControls {
+  max-height: 80vh;
+}
+.carousel-inner {
+  max-height: 80vh;
   background-size: cover;
-  background-repeat: repeat-x;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 
 footer { 
