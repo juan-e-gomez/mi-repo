@@ -276,22 +276,28 @@ table.tablePrice {
   padding-right: 0px;
   padding-left: 0px;
   max-height: 70vh;
-  overflow: hidden;
+  object-fit: cover;
+  align-items: flex-end;
+  vertical-align: bottom;
 }
 
 #carouselExampleControls {
   max-height: 70vh;
-  overflow: hidden;
+  object-fit: cover;
+  align-items: flex-end;
+  vertical-align: bottom;  
 }
+
 .carousel-inner {
   max-height: 70vh;
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
   background-repeat: no-repeat;
-  display: flex;
   flex-direction: column;
   justify-content: center;
-  overflow: hidden;
+  object-fit: cover;
+  align-items: flex-end;
+  vertical-align: bottom;
 }
 
 footer { 
