@@ -176,6 +176,11 @@ p {
   background-color: #297d40;
   min-height: 30vh;
   background-size: cover; }
+  #sec-E p {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    margin-bottom: 0; }
 
 #sec-F {
   min-height: 40vh;
@@ -228,27 +233,17 @@ table.tablePrice {
 #carousel-pina {
   padding-right: 0px;
   padding-left: 0px;
-  max-height: 70vh;
-  object-fit: cover;
-  align-items: flex-end;
-  vertical-align: bottom; }
+  max-height: 85vh; }
 
 #carouselExampleControls {
-  max-height: 70vh;
-  object-fit: cover;
-  align-items: flex-end;
-  vertical-align: bottom; }
+  max-height: 85vh;
+  background-position: bottom; }
 
 .carousel-inner {
-  max-height: 70vh;
+  max-height: 85vh;
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
-  flex-direction: column;
-  justify-content: center;
-  object-fit: cover;
-  align-items: flex-end;
-  vertical-align: bottom; }
+  background-position: bottom; }
 
 footer {
   padding: 0px 50px;
@@ -325,7 +320,7 @@ input[type=submit]:hover {
 
 /* Fin form de contacto */
 @keyframes onOff {
-  20% {
+  40% {
     opacity: 0; }
   80% {
     opacity: 1; } }
@@ -334,4 +329,4 @@ input[type=submit]:hover {
   animation-name: onOff;
   animation-iteration-count: infinite;
   animation-delay: 0s;
-  animation-duration: 4s; }
+  animation-duration: 6s; }
