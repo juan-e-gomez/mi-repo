@@ -356,7 +356,7 @@ input[type=submit]:hover {
   animation-delay: 0s;
   animation-duration: 6s; }
 
-@media (max-width: 760px) {
+@media (max-width: 992px) {
   .container-gridpage {
     display: grid;
     grid-template-columns: 1fr;
@@ -372,4 +372,11 @@ input[type=submit]:hover {
     color: white;
     font-weight: 600; }
   p {
+    font-size: 0.9rem; }
+  header {
+    margin-right: 0;
+    margin-left: 0;
+    padding-left: 15px;
+    padding-right: 15px; }
+  #boton {
     font-size: 0.9rem; } }
