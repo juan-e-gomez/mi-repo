@@ -29,90 +29,109 @@
     <!-- ccs custom -->
     <link rel="stylesheet" href="css/estilo.css">
     <script defer src="js/main.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<link rel="shortcut icon" href="assets/img/favicon-32x32.png">
 	<title>Tiny House Pinamar | Home</title>
 </head>
 <body>
-    <div class="container-gridpage">
+    <div class="container-fluid">
         <!-- header logo + nav -->
-        <header>
-            <nav class="animate__animated animate__backInDown animate__delay-0.5s navbar navbar-expand-lg navbar-dark" style="background-color:#00360e">
-                <a class="navbar-brand" href="#">
-                <img src="assets/img/logox64.png" width="64" height="64" class="d-inline-block align-center" alt="Logo">Tiny House Pinamar</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="pages/servicios.html">Amenities</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="pages/ubicacion.html">Location</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="pages/producto.html">Our houses & rates</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="pages/contacto.html">Contact us</a>
-                        </li>
-                    </ul>
+        <header class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-12">
+                    <nav class="animate__animated animate__backInDown animate__delay-0.5s navbar navbar-expand-lg navbar-dark" style="background-color:#00360e">
+                        <a class="navbar-brand" href="#">
+                            <img src="assets/img/logox64.png" width="64" height="64" class="d-inline-block align-center" alt="Logo">Tiny House Pinamar</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pages/servicios.html">Amenities</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pages/ubicacion.html">Location</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pages/producto.html">Our houses & rates</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pages/contacto.html">Contact us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
                 </div>
-            </nav>
+            </div>
         </header>
         <!-- main -->
-        <main id="hero">
-            <h1 class="animate__animated animate__backInRight animate__delay-1s">Tiny House Pinamar</h1>
-            <button id="boton" class="animate__animated animate__backInUp animate__delay-1s"><a href="pages/contacto.html">CONTACT US</a></button>
-            <!--search-form -->
-            <section class="search-form">
-                <div class="container bg-form col-xl-12 col-sm-12"> 
-                    <form class="row d-flex justify-content-center align-content-center">         
-                        <div class="col-xl-4 col-sm-6">                                
-                            <label for="check-in"style="font-size:smaller">Check-in</label>
-                            <input class="form-control form-control-sm" type="date" name="check-in" id="check-in">   
-                        </div>                        
-                        <div class="col-xl-4 col-sm-6">                                
-                            <label for="check-out" style="font-size:smaller">Check-out</label>
-                            <input class="form-control form-control-sm" type="date" name="check-out" id="check-out"> 
-                        </div>
-                         <div class="form-row form-group flex-column align-self-center col-xl-2 col-sm-6">                                
-                            <label for="guests" style="font-size:small">Guests</label>
-                            <select name="guests" id="pasajeros" class="form-control-sm" required></select>
-                        </div>
-                        <div class="align-self-center col-xl-2 col-sm-6">
-                            <a href="#"><button onclick="paxDetails()" id="book" type="button" class="btn btn-success btn-sm">Search</button></a>
-                        </div>
-                    </form>
+        <main id="hero" class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-12 text-center">
+                    <h1 class="animate__animated animate__backInRight animate__delay-1s">Tiny House Pinamar</h1>
+                    <button id="boton" class="animate__animated animate__backInUp animate__delay-1s"><a href="pages/contacto.html">CONTACT US</a></button>
                 </div>
-            </section>
+                <!--search-form -->
+                <section class="search-form">
+                    <div class="container bg-form col-lg-12 col-12"> 
+                        <form class="row d-flex justify-content-center align-content-center">         
+                            <div class="col-xl-4 col-sm-6">                                
+                                <label for="check-in"style="font-size:small;margin-top:17px">Check-in</label>
+                                <input class="form-control form-control-sm" type="date" name="check-in" id="check-in">   
+                            </div>                        
+                            <div class="col-xl-4 col-sm-6">                                
+                                <label for="check-out" style="font-size:small;margin-top:17px">Check-out</label>
+                                <input class="form-control form-control-sm" type="date" name="check-out" id="check-out"> 
+                            </div>
+                            <div class="form-row form-group flex-column align-self-center col-xl-2 col-sm-6">                                
+                                <label for="guests" style="font-size:small;font-weight:500;margin-top:10px">Guests</label>
+                                <select name="guests" id="pasajeros" class="form-control-sm" required></select>
+                            </div>
+                            <div class="align-self-center col-xl-2 col-sm-6" style="margin-top: 10px">
+                                <a href="#"><button onclick="paxDetails()" id="book" type="button" class="btn btn-success btn-sm btn-block">Search</button></a>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
         </main>
         <!-- sections -->
-        <section id="sec-A">
-            <h2 class="animate__animated animate__backInLeft animate__delay-1s">Bosques y playas.</h2>
-            <p>¡Reservá tu tiny para tu próxima escapada a la Costa! Respirá bosques y mar, y <b>viví la experiencia tiny en Pinamar</b>. Disfrutá de una estadía distinta en una de nuestras cabañas completamente equipadas y emplazadas en un amplio lote de pinos <b>a sólo 5 minutos de la playa.</b></p>
-        </section>
-        <section id="sec-B">
-        </section>
-        <section id="sec-C">
-        </section>
-        <section id="sec-D">
-            <h2 class="animate__animated animate__backInRight animate__delay-1s">Una escapada distinta.</h2>
-            <p>Wi-Fi incluido, parrilla y estacionamiento. Servicio de laundry. <b>Disponibilidad durante todo el año.</b> ¡Reservá online y pagá en pesos o dólares, con transferencia o Mercado Pago!</p>
-        </section>
+        <div class="container-fluid">
+            <div class="row">
+                <div id="sec-A" class="col-lg-6 col-12">
+                    <h2 class="animate__animated animate__backInLeft animate__delay-1s">Bosques y playas.</h2>
+                    <p>¡Reservá tu tiny para tu próxima escapada a la Costa! Respirá bosques y mar, y <b>viví la experiencia tiny en Pinamar</b>. Disfrutá de una estadía distinta en una de nuestras cabañas completamente equipadas y emplazadas en un amplio lote de pinos <b>a sólo 5 minutos de la playa.</b></p>
+                </div>
+                <div id="sec-B" class="col-lg-6 col-12">
+                    <img src="https://images.unsplash.com/photo-1604846252776-f2b3336da374?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="Playas de Pinamar">
+                </div>
+            </div>
+            <div class="row flex-row-reverse">
+                <div id="sec-C" class="col-lg-6 col-12 order-2">
+                    <img src="https://images.unsplash.com/photo-1604846253303-b30fc835b7a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80" alt="Paisaje pinamarense">
+                </div>
+                <div id="sec-D" class="col-lg-6 col-12 order-1">
+                    <h2 class="animate__animated animate__backInRight animate__delay-1s">Una escapada distinta.</h2>
+                    <p>Wi-Fi incluido, parrilla y estacionamiento. Servicio de laundry. <b>Disponibilidad durante todo el año.</b> ¡Reservá online y pagá en pesos o dólares, con transferencia o Mercado Pago!</p>
+                </div>
+            </div>
+        </div>
         <!-- footer -->
-        <footer>
-            <ul>
-                <li><a href="#"><img src="https://icongr.am/simple/whatsapp.svg?size=30&color=FFFFFF&colored=false" alt="WhatsApp"></a></li>
-                <li><a href="#"><img src="https://icongr.am/simple/facebook.svg?size=30&color=FFFFFF&colored=false" alt="Facebook"></a></li>
-                <li><a href="#"><img src="https://icongr.am/simple/instagram.svg?size=30&color=FFFFFF&colored=false" alt="Instagram"></a></li>
-            </ul>
-            <div class="justify-content-center text-center">
-                <p style="color:white"><small>Made with ❤️ in Pinamar</small></p>
+        <footer class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-12 d-flex justify-content-center">
+                    <ul>
+                        <li><a href="#"><img src="https://icongr.am/simple/whatsapp.svg?size=30&color=FFFFFF&colored=false" alt="WhatsApp"></a></li>
+                        <li><a href="#"><img src="https://icongr.am/simple/facebook.svg?size=30&color=FFFFFF&colored=false" alt="Facebook"></a></li>
+                        <li><a href="#"><img src="https://icongr.am/simple/instagram.svg?size=30&color=FFFFFF&colored=false" alt="Instagram"></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-12 col-12 justify-content-center text-center">
+                    <p style="color:white"><small>Made with ❤️ in Pinamar</small></p>
+                </div>
             </div>
         </footer>
     </div>

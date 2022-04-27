@@ -14,25 +14,11 @@ html, body {
   margin-right: 0;
   margin-left: 0; }
 
-.container-gridpage {
-  padding-left: 0;
-  padding-right: 0;
-  width: 100%;
-  margin-right: 0;
-  margin-left: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 800px 400px 400px auto;
-  grid-auto-flow: row;
-  grid-auto-columns: 1fr;
-  grid-template-areas: "header header" "hero hero" "sec-A sec-B" "sec-C sec-D" "footer footer";
-  height: 100%; }
-
 .search-form {
   margin: 3% 0;
   padding: 50px 50px 50px 50px;
   max-width: 100%;
-  width: 80vw; }
+  width: 100vw; }
 
 .bg-form {
   background-color: whitesmoke;
@@ -372,15 +358,6 @@ input[type=submit]:hover {
   animation-duration: 6s; }
 
 @media (max-width: 992px) {
-  .container-gridpage {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 600px 400px 400px 400px 400px auto;
-    grid-auto-flow: row;
-    grid-auto-columns: 1fr;
-    grid-template-areas: "header" "hero" "sec-A" "sec-B" "sec-D" "sec-C" "footer";
-    width: 100%;
-    height: 100%; }
   h1 {
     font-size: 2rem; }
   h2 {
@@ -393,4 +370,4 @@ input[type=submit]:hover {
     padding-left: 15px;
     padding-right: 15px; }
   #boton {
-    font-size: 0.7rem; } }
+    font-size: 0.9rem; } }
