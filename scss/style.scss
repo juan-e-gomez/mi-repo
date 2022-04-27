@@ -46,6 +46,23 @@ $estilo-container:(
   height: 100%;
 }
 
+.search-form{
+  margin: 3% 0;
+  padding: 50px 50px 50px 50px;
+  max-width: 100%;
+  width: 80vw;
+}
+
+.bg-form{
+  background-color: whitesmoke;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  border-radius: 0.5rem;
+  box-shadow: 5px 10px 18px #3e59058c; 
+  max-width: 100%;
+}
+
 .row {
   margin-right: 0;
   margin-left: 0;

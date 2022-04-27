@@ -28,6 +28,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap" rel="stylesheet"> 
     <!-- ccs custom -->
     <link rel="stylesheet" href="css/estilo.css">
+    <script defer src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<link rel="shortcut icon" href="assets/img/favicon-32x32.png">
 	<title>Tiny House Pinamar | Home</title>
 </head>
@@ -66,6 +68,28 @@
         <main id="hero">
             <h1 class="animate__animated animate__backInRight animate__delay-1s">Tiny House Pinamar</h1>
             <button id="boton" class="animate__animated animate__backInUp animate__delay-1s"><a href="pages/contacto.html">CONTACT US</a></button>
+            <!--search-form -->
+            <section class="search-form">
+                <div class="container bg-form col-xl-12 col-sm-12"> 
+                    <form class="row d-flex justify-content-center align-content-center">         
+                        <div class="col-xl-4 col-sm-6">                                
+                            <label for="check-in"style="font-size:smaller">Check-in</label>
+                            <input class="form-control form-control-sm" type="date" name="check-in" id="check-in">   
+                        </div>                        
+                        <div class="col-xl-4 col-sm-6">                                
+                            <label for="check-out" style="font-size:smaller">Check-out</label>
+                            <input class="form-control form-control-sm" type="date" name="check-out" id="check-out"> 
+                        </div>
+                         <div class="form-row form-group flex-column align-self-center col-xl-2 col-sm-6">                                
+                            <label for="guests" style="font-size:small">Guests</label>
+                            <select name="guests" id="pasajeros" class="form-control-sm" required></select>
+                        </div>
+                        <div class="align-self-center col-xl-2 col-sm-6">
+                            <a href="#"><button onclick="paxDetails()" id="book" type="button" class="btn btn-success btn-sm">Search</button></a>
+                        </div>
+                    </form>
+                </div>
+            </section>
         </main>
         <!-- sections -->
         <section id="sec-A">
