@@ -36,7 +36,7 @@ function paxDetails(){
     getDates()
     
     if(checkIn.value,checkOut.value,pasajeros.value === null || checkIn.value,checkOut.value,pasajeros.value === ''){
-        alert("Seleleccionar fechas y cantidad de pasajeros para continuar.")
+        alert("Seleccionar fechas y cantidad de pasajeros para continuar.")
     } else{
         alert(`Enviada solicitud de reserva para ${pasajeros.value} pasajero/s.\n Ingreso día ${checkIn.value}\n Egreso día ${checkOut.value}\nNúmero total de noches: ${days}`);
         console.log("Nuevo booking ingresado.\nDebajo lista actualizada con las solicitudes acumuladas, expresadas en cantidad de días de estadía.");
