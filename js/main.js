@@ -53,3 +53,10 @@ function paxDetails(){
         break;}
 }
 
+let btnChange = document.getElementById("book")
+btnChange.onmouseover = () => {
+    book.innerHTML = "Let's go! 🚀";
+}
+btnChange.onmouseout = () => {
+    book.innerHTML = "Search";
+}
