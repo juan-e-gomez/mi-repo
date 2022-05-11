@@ -36,27 +36,26 @@ function paxDetails(){
     getPax()
     getDates()
     
-    if(checkIn.value,checkOut.value,pasajeros.value === null || checkIn.value,checkOut.value,pasajeros.value === '')
+    if(checkIn.value,checkOut.value,pasajeros.value === null || checkIn.value,checkOut.value === "" || checkIn.value >= checkOut.value || pasajeros.value === "")
         searchStatus.innerText = "Seleccionar fechas y cantidad de pasajeros para continuar.";
     else{
         searchStatus.innerText = `Enviada solicitud de reserva para ${localStorage.getItem('pasajeros')} pasajero/s.\n Ingreso día ${localStorage.getItem('check-in')}\n Egreso día ${localStorage.getItem('check-out')}\nNúmero total de noches: ${days}`;
         console.log("Nuevo booking ingresado.\nDebajo arrays con las solicitudes acumuladas, expresadas en cantidad de pasajeros, check-in, check-out y días de estadía.");
-    }
 
-    arrayBookings.push([localStorage.getItem('pasajeros'),localStorage.getItem('check-in'),localStorage.getItem('check-out'),days]);
-    for (let i= 0; i < arrayBookings.length; i++) {
-        console.log(arrayBookings[i]);
-        localStorage.setItem("my_bookings", JSON.stringify(arrayBookings));
+        arrayBookings.push([localStorage.getItem('pasajeros'),localStorage.getItem('check-in'),localStorage.getItem('check-out'),days]);
+            for (let i= 0; i < arrayBookings.length; i++) {
+                console.log(arrayBookings[i]);
+                localStorage.setItem("my_bookings", JSON.stringify(arrayBookings));
+            }
+            while (arrayBookings.length > 4){
+                console.log("Se han reservado al menos 5 estadías. Por favor accionar.");
+                console.log(JSON.parse(localStorage.getItem('my_bookings')));
+                break;}
+            }
+            while (arrayBookings.some((days) => days > 10)) {
+                console.log("Atencion: hay solicitudes de estadía superiores a 10 días.")
+                break;}
     }
-    while (arrayBookings.length > 4){
-        console.log("Se han reservado al menos 5 estadías. Por favor accionar.");
-        console.log(JSON.parse(localStorage.getItem('my_bookings')));
-        break;}
-    }
-    while (arrayBookings.some((days) => days > 10)) {
-        console.log("Atencion: hay solicitudes de estadía superiores a 10 días.")
-        break;}
-
 
 let btnChange = document.getElementById("book")
 btnChange.onmouseover = () => {
