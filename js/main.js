@@ -3,6 +3,7 @@ let pasajeros = document.getElementById('pasajeros');
 
 function opciones(lista, opcion){
     let elemento = "";
+    /** operador ++ */
     for (let i = 0; i < lista.length; i++){
         elemento += "<option>" + lista[i] + "</option>";
     }
@@ -30,14 +31,14 @@ function getDates(){
 
 let searchStatus = document.getElementById("searchboxstatus")
 
-const arrayBookings = [];
+/** operador lógico OR */
+const arrayBookings = JSON.parse(localStorage.getItem('my_bookings')) || [];
 
 function paxDetails(){
     getPax()
     getDates()
-    
     if(checkIn.value,checkOut.value,pasajeros.value === null || checkIn.value,checkOut.value === "" || checkIn.value >= checkOut.value || pasajeros.value === "")
-        searchStatus.innerText = "Seleccionar fechas y cantidad de pasajeros para continuar.";
+        searchStatus.innerText = "Seleccionar fechas válidas y cantidad de pasajeros para continuar.";
     else{
         searchStatus.innerText = `Enviada solicitud de reserva para ${localStorage.getItem('pasajeros')} pasajero/s.\n Ingreso día ${localStorage.getItem('check-in')}\n Egreso día ${localStorage.getItem('check-out')}\nNúmero total de noches: ${days}`;
         console.log("Nuevo booking ingresado.\nDebajo arrays con las solicitudes acumuladas, expresadas en cantidad de pasajeros, check-in, check-out y días de estadía.");
@@ -48,7 +49,7 @@ function paxDetails(){
                 localStorage.setItem("my_bookings", JSON.stringify(arrayBookings));
             }
             while (arrayBookings.length > 4){
-                console.log("Se han reservado al menos 5 estadías. Por favor accionar.");
+                console.log("Se han reservado por lo menos 5 estadías. Por favor accionar.");
                 console.log(JSON.parse(localStorage.getItem('my_bookings')));
                 break;}
             }
