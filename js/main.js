@@ -29,34 +29,68 @@ function getDates(){
     days = difference/(1000 * 3600 * 24);
 }
 
-let searchStatus = document.getElementById("searchboxstatus")
-
 /** operador lógico OR */
 const arrayBookings = JSON.parse(localStorage.getItem('my_bookings')) || [];
 
 function paxDetails(){
     getPax()
     getDates()
-    if(checkIn.value,checkOut.value,pasajeros.value === null || checkIn.value,checkOut.value === "" || checkIn.value >= checkOut.value || pasajeros.value === "")
-        searchStatus.innerText = "Seleccionar fechas válidas y cantidad de pasajeros para continuar.";
+    if(checkIn.value,checkOut.value,pasajeros.value === null || checkIn.value,checkOut.value === "" || checkIn.value >= checkOut.value || pasajeros.value === "") {
+        Toastify({
+            text: "Seleccionar fechas válidas y cantidad de pasajeros para continuar.",
+            duration: 3000,
+            gravity: 'top',
+            position: 'right',
+            stopOnFocus: true,
+            style: {
+                background: "linear-gradient(to right, #00b09b, #96c93d)",
+            },
+            offset: {
+                x: 50, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+                y: 10 // vertical axis - can be a number or a string indicating unity. eg: '2em'
+            },
+        }).showToast();
+    }        
     else{
-        searchStatus.innerText = `Enviada solicitud de reserva para ${localStorage.getItem('pasajeros')} pasajero/s.\n Ingreso día ${localStorage.getItem('check-in')}\n Egreso día ${localStorage.getItem('check-out')}\nNúmero total de noches: ${days}`;
-        console.log("Nuevo booking ingresado.\nDebajo arrays con las solicitudes acumuladas, expresadas en cantidad de pasajeros, check-in, check-out y días de estadía.");
-
-        arrayBookings.push([localStorage.getItem('pasajeros'),localStorage.getItem('check-in'),localStorage.getItem('check-out'),days]);
-            for (let i= 0; i < arrayBookings.length; i++) {
-                console.log(arrayBookings[i]);
-                localStorage.setItem("my_bookings", JSON.stringify(arrayBookings));
+        Swal.fire({
+            titleText: '¿Confirmas la solicitud de reserva?',
+            html: `${localStorage.getItem('pasajeros')} huésped/es, con ingreso el ${localStorage.getItem('check-in')} y egreso el ${localStorage.getItem('check-out')} (${days} noches en total)`,
+            showCancelButton: true,
+            input: 'email',
+            inputPlaceholder: 'Ingresa tu e-mail',
+            confirmButtonText: 'Enviar',
+            confirmButtonColor: '#297d40',
+            cancelButtonText: 'Cancelar',
+            preConfirm: () => {
+                /** const email = Swal.getPopup().querySelector('#email').value*/
+                const email = Swal.getInput().value
+                return { email: email }
             }
-            while (arrayBookings.length > 4){
-                console.log("Se han reservado por lo menos 5 estadías. Por favor accionar.");
-                console.log(JSON.parse(localStorage.getItem('my_bookings')));
-                break;}
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    titleText: 'Enviada!',
+                    icon: 'success',
+                    text: `Tu solicitud ha sido enviada. Te contactaremos por mail a la brevedad (${result.value.email}).`});
+                arrayBookings.push([localStorage.getItem('pasajeros'),localStorage.getItem('check-in'),localStorage.getItem('check-out'),days, result.value.email]);
+                    for (let i= 0; i < arrayBookings.length; i++) {
+                        console.log(arrayBookings[i]);
+                        localStorage.setItem("my_bookings", JSON.stringify(arrayBookings));
+                    }
+                    while (arrayBookings.length > 4) {
+                        console.log("Se han reservado por lo menos 5 estadías. Por favor accionar.");
+                        console.log(JSON.parse(localStorage.getItem('my_bookings')));
+                        break;
+                    }
+                    while (arrayBookings.some((days) => days > 10)) {
+                        console.log("Atencion: hay solicitudes de estadía superiores a 10 días.")
+                        break;
+                    }
+                }
             }
-            while (arrayBookings.some((days) => days > 10)) {
-                console.log("Atencion: hay solicitudes de estadía superiores a 10 días.")
-                break;}
+        )
     }
+}
 
 let btnChange = document.getElementById("book")
 btnChange.onmouseover = () => {
