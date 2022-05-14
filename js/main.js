@@ -71,6 +71,7 @@ function paxDetails(){
                 Swal.fire({
                     titleText: 'Enviada!',
                     icon: 'success',
+                    confirmButtonColor: '#297d40',
                     text: `Tu solicitud ha sido enviada. Te contactaremos por mail a la brevedad (${result.value.email}).`});
                 arrayBookings.push([localStorage.getItem('pasajeros'),localStorage.getItem('check-in'),localStorage.getItem('check-out'),days, result.value.email]);
                     for (let i= 0; i < arrayBookings.length; i++) {
