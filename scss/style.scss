@@ -100,7 +100,7 @@ header {
 
 h1 {
     @include h1-hero;
- }
+}
 
 h2 {
   color: white;
@@ -167,7 +167,8 @@ p {
   color: white;
   margin-top: 0.5rem;
   text-align: center;
-  font-size: 1rem;
+  font-size: 14px;
+  font-weight: 400;
   font-family: 'Rubik', sans-serif;
   padding: 12px 20px;
   border: none;
@@ -431,6 +432,6 @@ input[type=submit]:hover {
     padding-right: 15px;
   }
   #boton{
-    font-size: 0.9rem;
+    font-size: 12px;
   }
 }
