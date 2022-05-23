@@ -3,7 +3,7 @@ let pasajeros = document.getElementById('pasajeros');
 
 function opciones(lista, opcion){
     let elemento = "";
-    /** operador ++ */
+    // operador ++
     for (let i = 0; i < lista.length; i++){
         elemento += "<option>" + lista[i] + "</option>";
     }
@@ -29,7 +29,7 @@ function getDates(){
     days = difference/(1000 * 3600 * 24);
 }
 
-/** operador lógico OR */
+/// operador lógico OR
 const arrayBookings = JSON.parse(localStorage.getItem('my_bookings')) || [];
 
 function paxDetails(){
@@ -62,7 +62,7 @@ function paxDetails(){
             confirmButtonColor: '#297d40',
             cancelButtonText: 'Cancelar',
             preConfirm: () => {
-                /** const email = Swal.getPopup().querySelector('#email').value*/
+                // si el input es un mail, se confirma
                 const email = Swal.getInput().value
                 return { email: email }
             }
@@ -73,6 +73,7 @@ function paxDetails(){
                     icon: 'success',
                     confirmButtonColor: '#297d40',
                     text: `Tu solicitud ha sido enviada. Te contactaremos por mail a la brevedad (${result.value.email}).`});
+                // se carga la solicitud de reserva al array de bookings y este a su vez se guarda en my_bookings del localstorage
                 arrayBookings.push([localStorage.getItem('pasajeros'),localStorage.getItem('check-in'),localStorage.getItem('check-out'),days, result.value.email]);
                     for (let i= 0; i < arrayBookings.length; i++) {
                         console.log(arrayBookings[i]);
@@ -81,6 +82,7 @@ function paxDetails(){
                     while (arrayBookings.length > 4) {
                         console.log("Se han reservado por lo menos 5 estadías. Por favor accionar.");
                         console.log(JSON.parse(localStorage.getItem('my_bookings')));
+                        sendBookings(); // se envia 'my_bookings' al administrador para que accione - ver email.js
                         break;
                     }
                     while (arrayBookings.some((days) => days > 10)) {
