@@ -32,6 +32,17 @@ function getDates(){
 /// operador lógico OR
 const arrayBookings = JSON.parse(localStorage.getItem('my_bookings')) || [];
 
+function reloadLastDates(){
+    const lastCheckIn = localStorage.getItem('check-in');
+    document.getElementById('check-in').value = lastCheckIn;
+    const lastCheckOut = localStorage.getItem('check-out');
+    document.getElementById('check-out').value = lastCheckOut;
+    const lastPaxQ = localStorage.getItem('pasajeros');
+    document.getElementById('pasajeros').value = lastPaxQ;
+}
+
+document.onload = reloadLastDates();
+
 function paxDetails(){
     getPax()
     getDates()
@@ -76,17 +87,10 @@ function paxDetails(){
                 // se carga la solicitud de reserva al array de bookings y este a su vez se guarda en my_bookings del localstorage
                 arrayBookings.push([localStorage.getItem('pasajeros'),localStorage.getItem('check-in'),localStorage.getItem('check-out'),days, result.value.email]);
                     for (let i= 0; i < arrayBookings.length; i++) {
-                        console.log(arrayBookings[i]);
                         localStorage.setItem("my_bookings", JSON.stringify(arrayBookings));
                     }
                     while (arrayBookings.length > 4) {
-                        console.log("Se han reservado por lo menos 5 estadías. Por favor accionar.");
-                        console.log(JSON.parse(localStorage.getItem('my_bookings')));
-                        sendBookings(); // se envia 'my_bookings' al administrador para que accione - ver email.js
-                        break;
-                    }
-                    while (arrayBookings.some((days) => days > 10)) {
-                        console.log("Atencion: hay solicitudes de estadía superiores a 10 días.")
+                        sendBookings(); // si hay +5 reservas, se envia 'my_bookings' al administrador para que accione - ver email.js
                         break;
                     }
                 }

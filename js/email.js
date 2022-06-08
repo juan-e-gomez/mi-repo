@@ -8,14 +8,13 @@ function sendmail() {
     let userEmail = document.getElementById("email").value;
     let userMessage = document.getElementById("message").value;
 
-        var contactParams = {
+        let contactParams = {
             from_name: fullName,
             to_email: userEmail,
             message: userMessage
         };
 
         emailjs.send('gmailMessage', 'template_5sc5t37', contactParams).then(function(response) {
-            console.log('Success!', response.status, response.text);
             Toastify({
                 text: "Tu solicitud de contacto ha sido enviada.",
                 duration: 3000,
@@ -31,7 +30,6 @@ function sendmail() {
                 },
             }).showToast();
         }, function(error) {
-            console.log('Error', error);
             Toastify({
                 text: "Hubo un problema con el envío del mensaje.",
                 duration: 3000,
@@ -55,7 +53,7 @@ function sendBookings() {
     let adminName = "Tiny House Pinamar Administrator";
     let bookingsList = localStorage.getItem('my_bookings');
 
-        var sendBookingsParams = {
+        let sendBookingsParams = {
             from_name: adminName,
             to_email: adminEmail,
             message: bookingsList
