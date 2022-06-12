@@ -60,8 +60,36 @@ function sendBookings() {
         };
 
         emailjs.send('gmailMessage', 'template_5sc5t37', sendBookingsParams).then(function(response) {
-            console.log('Success!', response.status, response.text);
+            Toastify({
+                text: "Se envió mail al administrador.",
+                duration: 3000,
+                gravity: 'top',
+                position: 'right',
+                stopOnFocus: true,
+                style: {
+                    background: "linear-gradient(to right, #00b09b, #96c93d)",
+                },
+                offset: {
+                    x: 50, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+                    y: 10 // vertical axis - can be a number or a string indicating unity. eg: '2em'
+                },
+            }).showToast();
+            // console.log('Success!', response.status, response.text);
         }, function(error) {
-            console.log('Error', error);
+            Toastify({
+                text: "Hubo un error.",
+                duration: 3000,
+                gravity: 'top',
+                position: 'right',
+                stopOnFocus: true,
+                style: {
+                    background: "linear-gradient(to right, #00b09b, #96c93d)",
+                },
+                offset: {
+                    x: 50, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+                    y: 10 // vertical axis - can be a number or a string indicating unity. eg: '2em'
+                },
+            }).showToast();
+            // console.log('Error', error);
         });
 }
