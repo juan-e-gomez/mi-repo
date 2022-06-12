@@ -25,8 +25,8 @@ function getDates(){
     localStorage.setItem(checkOut.id, checkOut.value);
     let checkInDate = new Date(checkIn.value);
     let checkOutDate = new Date(checkOut.value);
-    let difference= Math.abs(checkOutDate - checkInDate);
-    days = difference/(1000 * 3600 * 24);
+    let difference = Math.abs(checkOutDate - checkInDate);
+    days = Number(difference/(1000 * 3600 * 24));
 }
 
 /// operador lógico OR
@@ -89,9 +89,8 @@ function paxDetails(){
                     for (let i= 0; i < arrayBookings.length; i++) {
                         localStorage.setItem("my_bookings", JSON.stringify(arrayBookings));
                     }
-                    while (arrayBookings.length > 4) {
+                    if (arrayBookings.length > 4) {
                         sendBookings(); // si hay +5 reservas, se envia 'my_bookings' al administrador para que accione - ver email.js
-                        break;
                     }
                 }
             }
